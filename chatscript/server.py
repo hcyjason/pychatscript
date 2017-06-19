@@ -13,7 +13,7 @@ class ChatScriptServer(object):
 
         connection = socket.create_connection((self.servername, self.port))
 
-        connection.send(to_say.encode(encoding='utf-8'))
+        connection.send(to_say)
         response =  ""
         while True:
             chunk = connection.recv(100)
